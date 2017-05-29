@@ -24,6 +24,11 @@ public class BaseCalculatorTest {
         System.out.println("Before method");
     }
 
+    @BeforeGroups(value = {"main"})
+    public void beforeGroup(){
+        System.out.println("Before groups named 'main'");
+    }
+
     @BeforeClass
     public void setUp() {
         System.out.println("Create instance of Calculator ");

@@ -1,11 +1,65 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Calculator" verbose="1" parallel="false">
-<test name="SumTest">
-    <parameter name="a" value="1"/>
-    <parameter name="b" value="1"/>
-    <parameter name="expected" value="2"/>
-    <classes>
-        <class name="com.epam.tat.module4.Calculator"></class>
-    </classes>
-</test>
+    <test name="SumLongTest">
+        <parameter name="a" value="1"/>
+        <parameter name="b" value="1"/>
+        <parameter name="expected" value="2"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.SumLongTest"></class>
+        </classes>
+    </test>
+
+    <test name="SumDoubleTest">
+        <parameter name="a" value="1.5"/>
+        <parameter name="b" value="2.3"/>
+        <parameter name="expected" value="3.8"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.SumDoubleTest"></class>
+        </classes>
+    </test>
+
+    <test name="DivLongTest">
+        <parameter name="a" value="9"/>
+        <parameter name="b" value="3"/>
+        <parameter name="expected" value="3"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.DivLongTest"></class>
+        </classes>
+    </test>
+
+    <test name="DivDoubleTest">
+        <parameter name="a" value="9.3"/>
+        <parameter name="b" value="3.1"/>
+        <parameter name="expected" value="3"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.DivDoubleTest"></class>
+        </classes>
+    </test>
+
+    <test name="PowTest">
+        <parameter name="a" value="3"/>
+        <parameter name="b" value="2"/>
+        <parameter name="expected" value="9"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.PowTest"></class>
+        </classes>
+    </test>
+
+    <test name="TgTest">
+        <parameter name="a" value="360"/>
+        <parameter name="expected" value="0"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.TgTest"></class>
+        </classes>
+    </test>
+
+    <test name="CosTest">
+        <parameter name="a" value="90"/>
+        <parameter name="expected" value="0"/>
+        <classes>
+            <class name="com.epam.atm.module4.test.CosTest"></class>
+        </classes>
+    </test>
+
+
 </suite>
