@@ -8,5 +8,7 @@
 .idea/modules.xml
 .idea/project-template.xml
 .idea/uiDesigner.xml
+CalculatorTestNG.iml
+.idea
 build/
 classes/
