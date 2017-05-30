@@ -3,16 +3,15 @@ package com.epam.atm.module4.test;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TgTest extends BaseCalculatorTest {
+
     @Test(groups = "main", dataProvider = "TgDataProvider")
-    @Parameters({"a", "expected"})
     public void testTg(double a, double expected) {
         checkTime();
         double tg = calculator.tg(a);
-        Assert.assertEquals(tg, expected);
+        Assert.assertEquals(tg, expected, "Expected to be equal: " + expected);
         System.out.println(a);
     }
 

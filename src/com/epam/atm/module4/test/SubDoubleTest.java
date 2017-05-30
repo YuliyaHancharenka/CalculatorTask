@@ -3,14 +3,14 @@ package com.epam.atm.module4.test;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
 public class SubDoubleTest extends BaseCalculatorTest {
+
     private double a;
     private double b;
     private double expected;
+
     private static final double DELTA = 1e-15;
 
     @Factory(dataProvider = "SubDoubleDataProvider")
@@ -21,10 +21,9 @@ public class SubDoubleTest extends BaseCalculatorTest {
     }
 
     @Test
-    @Parameters({"a", "b", "expected"})
     public void testDoubleSub() {
         double sub = calculator.sub(a, b);
-        Assert.assertEquals(sub, expected, DELTA);
+        Assert.assertEquals(sub, expected, DELTA, "Expected to be equal: " + expected);
     }
 
 

@@ -3,17 +3,15 @@ package com.epam.atm.module4.test;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class MultLongTest extends BaseCalculatorTest {
+
     @Test(dataProvider = "MultLongDataProvider")
-    @Parameters({"a", "b", "expected"})
     public void testLongMult(long a, long b, long expected) {
         long mult = calculator.mult(a, b);
-        Assert.assertEquals(mult, expected);
+        Assert.assertEquals(mult, expected, "Expected to be equal: " + expected);
     }
-
 
     @DataProvider(name = "MultLongDataProvider")
     public Object[][] multLongDataProvider() {

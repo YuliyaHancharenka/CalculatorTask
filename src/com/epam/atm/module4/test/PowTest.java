@@ -2,15 +2,23 @@ package com.epam.atm.module4.test;
 
 
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PowTest extends BaseCalculatorTest {
-    @Test(groups = "main")
-    @Parameters({"a", "b", "expected"})
+
+    @Test(dataProvider = "PowDataProvider", groups = "main")
     public void testPow(double a, double b, double expected) {
         checkTime();
         double pow = calculator.pow(a, b);
-        Assert.assertEquals(pow, expected);
+        Assert.assertEquals(pow, expected, "Expected to be equal: " + expected);
+    }
+
+    @DataProvider(name = "PowDataProvider")
+    public Object[][] powDataProvider() {
+        return new Object[][]{
+                {1, 1, 1},
+                {5, 2, 25},
+        };
     }
 }

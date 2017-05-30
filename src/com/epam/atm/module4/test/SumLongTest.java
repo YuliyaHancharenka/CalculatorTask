@@ -12,6 +12,6 @@ public class SumLongTest extends BaseCalculatorTest {
     public void testLongSum(long a, long b, long expected) {
         checkTime();
         long sum = calculator.sum(a, b);
-        Assert.assertEquals(sum, expected);
+        Assert.assertEquals(sum, expected, "Expected to be equal: " + expected);
     }
 }

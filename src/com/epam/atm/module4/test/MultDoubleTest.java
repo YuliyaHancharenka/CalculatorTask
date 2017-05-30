@@ -3,15 +3,14 @@ package com.epam.atm.module4.test;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class MultDoubleTest extends BaseCalculatorTest {
+
     @Test(dataProvider = "MultDoubleDataProvider")
-    @Parameters({"a", "b", "expected"})
     public void testDoubleMult(double a, double b, double expected) {
         double mult = calculator.mult(a, b);
-        Assert.assertEquals(mult, expected);
+        Assert.assertEquals(mult, expected, "Expected to be equal: " + expected);
     }
 
     @DataProvider(name = "MultDoubleDataProvider")
