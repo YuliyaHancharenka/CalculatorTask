@@ -1,14 +1,1 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea/dataSources.local.xml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/
-.idea/description.html
-.idea/misc.xml
-.idea/modules.xml
-.idea/project-template.xml
-.idea/uiDesigner.xml
-CalculatorTestNG.iml
-.idea
-build/
-classes/
+
