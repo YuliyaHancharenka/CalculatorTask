@@ -1,7 +1,6 @@
 package com.epam.atm.module4.test;
 
 
-import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;

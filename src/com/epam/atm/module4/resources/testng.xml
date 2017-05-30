@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Calculator" verbose="1" parallel="methods" thread-count="5">
+
     <test name="SumLongTest">
         <parameter name="a" value="1"/>
         <parameter name="b" value="1"/>

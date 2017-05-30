@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DivLongTest extends BaseCalculatorTest {
-    @Test//(dependsOnGroups = "main")
+    @Test(dependsOnGroups = "main")
     @Parameters({"a", "b", "expected"})
     public void testLongDiv(long a, long b, long expected) {
         checkTime();
