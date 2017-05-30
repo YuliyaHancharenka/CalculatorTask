@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class SinTest extends BaseCalculatorTest {
 
-    @Test(dataProvider = "SinDataProvider")
+    @Test(description = "Check sin method", dataProvider = "SinDataProvider")
     public void testSin(double a, double expected) {
         double sin = calculator.sin(a);
         Assert.assertEquals(sin, expected, "Expected to be equal: " + expected);

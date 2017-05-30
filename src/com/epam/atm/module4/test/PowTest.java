@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class PowTest extends BaseCalculatorTest {
 
-    @Test(dataProvider = "PowDataProvider", groups = "main")
+    @Test(description = "Check pow method", dataProvider = "PowDataProvider", groups = "main")
     public void testPow(double a, double b, double expected) {
         checkTime();
         double pow = calculator.pow(a, b);

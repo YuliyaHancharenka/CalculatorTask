@@ -19,7 +19,7 @@ public class SubLongTest extends BaseCalculatorTest {
         this.expected = expected;
     }
 
-    @Test
+    @Test(description = "Check long subtraction method")
     public void testLongSub() {
         long sub = calculator.sub(a, b);
         Assert.assertEquals(sub, expected, "Expected to be equal: " + expected);

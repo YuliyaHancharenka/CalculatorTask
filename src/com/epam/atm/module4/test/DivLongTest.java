@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class DivLongTest extends BaseCalculatorTest {
 
-    @Test(dependsOnGroups = "main")
+    @Test(description = "Check long division method")
     @Parameters({"a", "b", "expected"})
     public void testLongDiv(long a, long b, long expected) {
         checkTime();

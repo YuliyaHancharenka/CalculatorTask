@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class DivDoubleTest extends BaseCalculatorTest {
 
-    @Test(dependsOnGroups = "main")
+    @Test(description = "Check double division method")
     @Parameters({"a", "b", "expected"})
     public void testDoubleDiv(double a, double b, double expected) {
         checkTime();

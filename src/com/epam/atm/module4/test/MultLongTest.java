@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class MultLongTest extends BaseCalculatorTest {
 
-    @Test(dataProvider = "MultLongDataProvider")
+    @Test(description = "Check long multiplication method", dataProvider = "MultLongDataProvider")
     public void testLongMult(long a, long b, long expected) {
         long mult = calculator.mult(a, b);
         Assert.assertEquals(mult, expected, "Expected to be equal: " + expected);

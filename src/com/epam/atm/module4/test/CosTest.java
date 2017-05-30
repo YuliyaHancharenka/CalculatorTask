@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class CosTest extends BaseCalculatorTest {
 
-    @Test(groups = "main", dataProvider = "CosDataProvider")
+    @Test(description = "Check cos method", groups = "main", dataProvider = "CosDataProvider")
     public void testCos(double a, double expected) {
         checkTime();
         double cos = calculator.cos(a);

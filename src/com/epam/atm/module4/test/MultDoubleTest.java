@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class MultDoubleTest extends BaseCalculatorTest {
 
-    @Test(dataProvider = "MultDoubleDataProvider")
+    @Test(description = "Check double multiplication method", dataProvider = "MultDoubleDataProvider")
     public void testDoubleMult(double a, double b, double expected) {
         double mult = calculator.mult(a, b);
         Assert.assertEquals(mult, expected, "Expected to be equal: " + expected);

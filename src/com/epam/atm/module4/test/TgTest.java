@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TgTest extends BaseCalculatorTest {
 
-    @Test(groups = "main", dataProvider = "TgDataProvider")
+    @Test(description = "Check tg method", groups = "main", dataProvider = "TgDataProvider")
     public void testTg(double a, double expected) {
         checkTime();
         double tg = calculator.tg(a);

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class SumDoubleTest extends BaseCalculatorTest {
 
-    @Test(groups = "main")
+    @Test(description = "Check double sum method")
     @Parameters({"a", "b", "expected"})
     public void testDoubleSum(double a, double b, double expected) {
         checkTime();

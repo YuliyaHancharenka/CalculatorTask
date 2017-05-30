@@ -20,7 +20,7 @@ public class SubDoubleTest extends BaseCalculatorTest {
         this.expected = expected;
     }
 
-    @Test
+    @Test(description = "Check double subtraction method")
     public void testDoubleSub() {
         double sub = calculator.sub(a, b);
         Assert.assertEquals(sub, expected, DELTA, "Expected to be equal: " + expected);

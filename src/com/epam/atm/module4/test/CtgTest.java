@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class CtgTest extends BaseCalculatorTest {
 
-    @Test(dataProvider = "CtgDataProvider")
+    @Test(description = "Check ctg method", dataProvider = "CtgDataProvider")
     public void testCtg(double a, double expected) {
         double ctg = calculator.ctg(a);
         Assert.assertEquals(ctg, expected, "Expected to be equal: " + expected);
