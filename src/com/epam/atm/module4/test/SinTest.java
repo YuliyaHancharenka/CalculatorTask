@@ -1,7 +1,6 @@
 package com.epam.atm.module4.test;
 
 
-import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -19,8 +18,8 @@ public class SinTest extends BaseCalculatorTest {
     @DataProvider(name = "SinDataProvider")
     public Object[][] sinDataProvider() {
         return new Object[][]{
-                {360, 0},
-                {0, 0}
+                {90, 1},
+                {0, 0},
         };
     }
 }

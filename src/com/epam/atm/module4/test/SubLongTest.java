@@ -1,7 +1,6 @@
 package com.epam.atm.module4.test;
 
 
-import com.epam.tat.module4.Calculator;
 import com.epam.tat.module4.Timeout;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -23,7 +22,7 @@ public class SubLongTest extends BaseCalculatorTest {
 
     @Test(timeOut = 1000)
     @Parameters({"a", "b", "expected"})
-    public void testSub() {
+    public void testLongSub() {
         Timeout.sleep(2);
         long sub = calculator.sub(a, b);
         Assert.assertEquals(sub, expected);

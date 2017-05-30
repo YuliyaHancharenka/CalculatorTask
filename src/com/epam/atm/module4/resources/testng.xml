@@ -1,11 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Calculator" verbose="1" parallel="false">
+<suite name="Calculator" verbose="1" parallel="methods" thread-count="5">
     <test name="SumLongTest">
         <parameter name="a" value="1"/>
         <parameter name="b" value="1"/>
         <parameter name="expected" value="2"/>
         <classes>
-            <class name="com.epam.atm.module4.test.SumLongTest"></class>
+            <class name="com.epam.atm.module4.test.SumLongTest">
+            <methods>
+                <exclude name="testLongSum"></exclude>
+            </methods>
+            </class>
         </classes>
     </test>
 
@@ -41,20 +45,24 @@
         <parameter name="b" value="2"/>
         <parameter name="expected" value="9"/>
         <classes>
-            <class name="com.epam.atm.module4.test.PowTest"></class>
+            <class name="com.epam.atm.module4.test.PowTest">
+                <methods>
+                    <exclude name="testPow"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
 
     <test name="TgTest">
-        <parameter name="a" value="360"/>
-        <parameter name="expected" value="0"/>
+        <parameter name="a" value="45"/>
+        <parameter name="expected" value="1"/>
         <classes>
             <class name="com.epam.atm.module4.test.TgTest"></class>
         </classes>
     </test>
 
     <test name="CosTest">
-        <parameter name="a" value="90"/>
+        <parameter name="a" value="180"/>
         <parameter name="expected" value="0"/>
         <classes>
             <class name="com.epam.atm.module4.test.CosTest"></class>

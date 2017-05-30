@@ -1,6 +1,5 @@
 package com.epam.atm.module4.test;
 
-import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
@@ -22,7 +21,7 @@ public class SubDoubleTest extends BaseCalculatorTest {
 
     @Test
     @Parameters({"a", "b", "expected"})
-    public void testSub() {
+    public void testDoubleSub() {
         double sub = calculator.sub(a, b);
         Assert.assertEquals(sub, expected);
     }

@@ -2,55 +2,53 @@ package com.epam.atm.module4.test;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.*;
-
+import java.lang.reflect.Method;
 import java.util.Date;
 
 public class BaseCalculatorTest {
 
-    Calculator calculator;
+    protected Calculator calculator;
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("Before suite");
+        System.out.println("Suite 'Calculator' started");
     }
 
     @BeforeClass
     public void beforeClass() {
-        System.out.println("Before class");
-    }
-
-    @BeforeMethod
-    public void beforeMethod() {
-        System.out.println("Before method");
-    }
-
-    @BeforeGroups(value = {"main"})
-    public void beforeGroup(){
-        System.out.println("Before groups named 'main'");
-    }
-
-    @BeforeClass
-    public void setUp() {
-        System.out.println("Create instance of Calculator ");
+        System.out.println("Class started: " + getClass());
+        System.out.println("Create instance of Calculator");
         calculator = new Calculator();
     }
 
-    @AfterMethod
-    public void afterMethod() {
-        System.out.println("After method");
+    @BeforeGroups(value = {"main"})
+    public void beforeGroup() {
+        System.out.println("Groups named 'main' started");
     }
 
-    @AfterSuite
-    public void afterSuite() {
-        System.out.println("After suite");
+    @BeforeMethod()
+    public void beforeMethod(Method method) {
+        String testName = method.getName();
+        System.out.println("Method started: " +  testName);
+    }
+
+    @AfterMethod
+    public void afterMethod(Method method) {
+        String testName = method.getName();
+        System.out.println("Method finished: " +  testName);
     }
 
     @AfterClass
     public void afterClass() {
-        System.out.println("After class");
+        System.out.println("Class finished: " + getClass());
     }
 
-    protected void checkTime(){
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("Suite 'Calculator' finished");
+    }
+
+    protected void checkTime() {
         System.out.println("Current time: " + new Date(System.currentTimeMillis()));
     }
 }

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class MultLongTest extends BaseCalculatorTest {
     @Test(dataProvider = "MultLongDataProvider")
     @Parameters({"a", "b", "expected"})
-    public void testMult(long a, long b, long expected) {
+    public void testLongMult(long a, long b, long expected) {
         long mult = calculator.mult(a, b);
         Assert.assertEquals(mult, expected);
     }
