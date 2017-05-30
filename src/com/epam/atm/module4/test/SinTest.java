@@ -18,7 +18,7 @@ public class SinTest extends BaseCalculatorTest {
     @DataProvider(name = "SinDataProvider")
     public Object[][] sinDataProvider() {
         return new Object[][]{
-                {90, 1},
+                {Math.PI/2, 1},
                 {0, 0},
         };
     }

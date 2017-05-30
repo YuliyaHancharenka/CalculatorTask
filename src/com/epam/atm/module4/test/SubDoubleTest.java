@@ -11,6 +11,7 @@ public class SubDoubleTest extends BaseCalculatorTest {
     private double a;
     private double b;
     private double expected;
+    private static final double DELTA = 1e-15;
 
     @Factory(dataProvider = "SubDoubleDataProvider")
     public SubDoubleTest(double a, double b, double expected) {
@@ -23,7 +24,7 @@ public class SubDoubleTest extends BaseCalculatorTest {
     @Parameters({"a", "b", "expected"})
     public void testDoubleSub() {
         double sub = calculator.sub(a, b);
-        Assert.assertEquals(sub, expected);
+        Assert.assertEquals(sub, expected, DELTA);
     }
 
 

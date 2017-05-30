@@ -18,8 +18,8 @@ public class CtgTest extends BaseCalculatorTest {
     @DataProvider(name = "CtgDataProvider")
     public Object[][] ctgDataProvider() {
         return new Object[][]{
-                {45, 1},
-                {135, -1}
+                {Math.PI/4, 1},
+                {Math.PI/2, 0}
         };
     }
 }
