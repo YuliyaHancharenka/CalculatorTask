@@ -3,7 +3,6 @@ package com.epam.atm.module4.junit;
 import com.epam.tat.module4.Calculator;
 import org.junit.*;
 
-import java.lang.reflect.Method;
 import java.util.Date;
 
 public class BaseCalculatorTest {
@@ -12,7 +11,7 @@ public class BaseCalculatorTest {
 
     @BeforeClass
     public static void beforeClass() {
-    //    System.out.println("Class started: " + getClass());
+        System.out.println("Class started: " /*+ getClass()*/);
         System.out.println("Create instance of Calculator");
     }
 
@@ -30,7 +29,7 @@ public class BaseCalculatorTest {
 
     @AfterClass
     public static void afterClass() {
-   //     System.out.println("Class finished: " + getClass());
+        System.out.println("Class finished: " /*+ getClass()*/);
     }
 
     protected void checkTime() {

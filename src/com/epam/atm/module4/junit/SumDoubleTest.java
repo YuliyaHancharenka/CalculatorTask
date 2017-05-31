@@ -37,7 +37,7 @@ public class SumDoubleTest extends BaseCalculatorTest {
     public void testDoubleSum() {
         checkTime();
         Calculator calculator = new Calculator();
-        double pow = calculator.sum(a, b);
-        assertEquals(expected, pow, DELTA);
+        double sum = calculator.sum(a, b);
+        assertEquals("Expected to be equal: " + expected, expected, sum, DELTA);
     }
 }

@@ -37,6 +37,6 @@ public class TgTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double tg = calculator.tg(a);
-        assertEquals(expected, tg, DELTA);
+        assertEquals("Expected to be equal: " + expected, expected, tg, DELTA);
     }
 }

@@ -17,7 +17,7 @@ public class PowTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1, 1, 1},
-                {5, 2, 25}
+                {5.1, 2, 26.01}
         });
     }
 
@@ -38,6 +38,6 @@ public class PowTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double pow = calculator.pow(a, b);
-        assertEquals(expected, pow, DELTA);
+        assertEquals("Expected to be equal: " + expected, expected, pow, DELTA);
     }
 }

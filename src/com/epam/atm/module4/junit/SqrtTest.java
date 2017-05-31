@@ -37,6 +37,6 @@ public class SqrtTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double sqrt = calculator.sqrt(a);
-        assertEquals(expected, sqrt, DELTA);
+        assertEquals("Expected to be equal: " + expected, expected, sqrt, DELTA);
     }
 }

@@ -37,6 +37,6 @@ public class SinTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double sin = calculator.sin(a);
-        assertEquals(expected, sin, DELTA);
+        assertEquals("Expected to be equal: " + expected, expected, sin, DELTA);
     }
 }

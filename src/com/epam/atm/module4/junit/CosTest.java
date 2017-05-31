@@ -37,6 +37,6 @@ public class CosTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double cos = calculator.cos(a);
-        assertEquals(expected, cos, DELTA);
+        assertEquals("Expected to be equal: " + expected, expected, cos, DELTA);
     }
 }

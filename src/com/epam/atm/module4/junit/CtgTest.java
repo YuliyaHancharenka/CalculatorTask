@@ -37,6 +37,6 @@ public class CtgTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double ctg = calculator.ctg(a);
-        assertEquals(expected, ctg, DELTA);
+        assertEquals("Expected to be equal: " + expected, expected, ctg, DELTA);
     }
 }

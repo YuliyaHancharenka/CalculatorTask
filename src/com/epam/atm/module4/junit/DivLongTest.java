@@ -38,7 +38,7 @@ public class DivLongTest extends BaseCalculatorTest {
     public void testLongDiv() {
         checkTime();
         Calculator calculator = new Calculator();
-        double pow = calculator.div(a, b);
-        assertEquals(expected, pow, DELTA);
+        double div = calculator.div(a, b);
+        assertEquals("Expected to be equal: " + expected, expected, div, DELTA);
     }
 }

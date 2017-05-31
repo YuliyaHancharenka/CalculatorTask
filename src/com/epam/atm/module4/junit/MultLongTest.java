@@ -37,7 +37,7 @@ public class MultLongTest extends BaseCalculatorTest {
     public void testLongMult() {
         checkTime();
         Calculator calculator = new Calculator();
-        double pow = calculator.mult(a, b);
-        assertEquals(expected, pow, DELTA);
+        double mult = calculator.mult(a, b);
+        assertEquals("Expected to be equal: " + expected, expected, mult, DELTA);
     }
 }

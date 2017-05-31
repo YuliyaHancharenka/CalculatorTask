@@ -37,7 +37,7 @@ public class SubDoubleTest extends BaseCalculatorTest {
     public void testDoubleSub() {
         checkTime();
         Calculator calculator = new Calculator();
-        double pow = calculator.sub(a, b);
-        assertEquals(expected, pow, DELTA);
+        double sub = calculator.sub(a, b);
+        assertEquals("Expected to be equal: " + expected, expected, sub, DELTA);
     }
 }

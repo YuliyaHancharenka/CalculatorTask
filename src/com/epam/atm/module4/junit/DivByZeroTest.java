@@ -16,26 +16,25 @@ public class DivByZeroTest extends BaseCalculatorTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {121, 11},
-                {16, 4}
+                {121, 0},
+                {16, 0}
         });
     }
 
-    private double a;
-    private double expected;
+    private long a;
+    private long b;
 
     private static final double DELTA = 1e-15;
 
-    public DivByZeroTest(double a, double expected) {
+    public DivByZeroTest(long a, long b) {
         this.a = a;
-        this.expected = expected;
+        this.b = b;
     }
 
-    @Test
+    @Test(expected = NumberFormatException.class)
     public void testDivByZero() {
         checkTime();
         Calculator calculator = new Calculator();
-        double pow = calculator.sqrt(a);
-        assertEquals(expected, pow, DELTA);
+        double divByZero = calculator.div(a, b);
     }
 }
