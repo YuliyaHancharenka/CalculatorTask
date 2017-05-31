@@ -1,4 +1,4 @@
-package com.epam.atm.module4.test;
+package com.epam.atm.module4.testng;
 
 
 import org.testng.annotations.DataProvider;

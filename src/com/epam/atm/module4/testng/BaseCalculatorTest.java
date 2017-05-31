@@ -1,4 +1,4 @@
-package com.epam.atm.module4.test;
+package com.epam.atm.module4.testng;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.*;

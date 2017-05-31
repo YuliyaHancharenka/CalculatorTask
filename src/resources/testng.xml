@@ -12,7 +12,7 @@
         <parameter name="b" value="1"/>
         <parameter name="expected" value="2"/>
         <classes>
-            <class name="com.epam.atm.module4.test.SumLongTest"></class>
+            <class name="com.epam.atm.module4.testng.SumLongTest"></class>
         </classes>
     </test>
 
@@ -21,7 +21,7 @@
         <parameter name="b" value="2.3"/>
         <parameter name="expected" value="3.8"/>
         <classes>
-            <class name="com.epam.atm.module4.test.SumDoubleTest"></class>
+            <class name="com.epam.atm.module4.testng.SumDoubleTest"></class>
         </classes>
     </test>
 
@@ -30,7 +30,7 @@
         <parameter name="b" value="3"/>
         <parameter name="expected" value="3"/>
         <classes>
-            <class name="com.epam.atm.module4.test.DivLongTest"></class>
+            <class name="com.epam.atm.module4.testng.DivLongTest"></class>
         </classes>
     </test>
 
@@ -39,7 +39,7 @@
         <parameter name="b" value="3.1"/>
         <parameter name="expected" value="3"/>
         <classes>
-            <class name="com.epam.atm.module4.test.DivDoubleTest"></class>
+            <class name="com.epam.atm.module4.testng.DivDoubleTest"></class>
         </classes>
     </test>
 
@@ -48,7 +48,7 @@
         <parameter name="b" value="2"/>
         <parameter name="expected" value="9"/>
         <classes>
-            <class name="com.epam.atm.module4.test.PowTest"></class>
+            <class name="com.epam.atm.module4.testng.PowTest"></class>
         </classes>
     </test>
 
@@ -56,61 +56,61 @@
         <parameter name="a" value="16"/>
         <parameter name="expected" value="4"/>
         <classes>
-            <class name="com.epam.atm.module4.test.SqrtTest"></class>
+            <class name="com.epam.atm.module4.testng.SqrtTest"></class>
         </classes>
     </test>
 
     <test name="SubLongTest">
         <classes>
-            <class name="com.epam.atm.module4.test.SubLongTest"></class>
+            <class name="com.epam.atm.module4.testng.SubLongTest"></class>
         </classes>
     </test>
 
     <test name="SubDoubleTest">
         <classes>
-            <class name="com.epam.atm.module4.test.SubDoubleTest"></class>
+            <class name="com.epam.atm.module4.testng.SubDoubleTest"></class>
         </classes>
     </test>
 
     <test name="MultLongTest">
         <classes>
-            <class name="com.epam.atm.module4.test.MultLongTest"></class>
+            <class name="com.epam.atm.module4.testng.MultLongTest"></class>
         </classes>
     </test>
 
     <test name="MultDoubleTest">
         <classes>
-            <class name="com.epam.atm.module4.test.MultDoubleTest"></class>
+            <class name="com.epam.atm.module4.testng.MultDoubleTest"></class>
         </classes>
     </test>
 
     <test name="SinTest">
         <classes>
-            <class name="com.epam.atm.module4.test.SinTest"></class>
+            <class name="com.epam.atm.module4.testng.SinTest"></class>
         </classes>
     </test>
 
     <test name="CosTest">
         <classes>
-            <class name="com.epam.atm.module4.test.CosTest"></class>
+            <class name="com.epam.atm.module4.testng.CosTest"></class>
         </classes>
     </test>
 
     <test name="TgTest">
         <classes>
-            <class name="com.epam.atm.module4.test.TgTest"></class>
+            <class name="com.epam.atm.module4.testng.TgTest"></class>
         </classes>
     </test>
 
     <test name="CtgTest">
         <classes>
-            <class name="com.epam.atm.module4.test.CtgTest"></class>
+            <class name="com.epam.atm.module4.testng.CtgTest"></class>
         </classes>
     </test>
 
     <test name="DivByZeroTest">
         <classes>
-            <class name="com.epam.atm.module4.test.DivByZeroTest"></class>
+            <class name="com.epam.atm.module4.testng.DivByZeroTest"></class>
         </classes>
     </test>
 
