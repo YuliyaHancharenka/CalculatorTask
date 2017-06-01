@@ -26,7 +26,6 @@ public class DivDoubleTest extends BaseCalculatorTest {
     private double b;
     private double expected;
 
-    private static final double DELTA = 1e-15;
 
     public DivDoubleTest(double a, double b, double expected) {
         this.a = a;
@@ -39,6 +38,6 @@ public class DivDoubleTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double div = calculator.div(a, b);
-        assertEquals("Expected to be equal: " + expected, expected, div, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, div, DELTA);
     }
 }

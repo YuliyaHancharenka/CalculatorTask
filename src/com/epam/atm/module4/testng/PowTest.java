@@ -11,7 +11,7 @@ public class PowTest extends BaseCalculatorTest {
     public void testPow(double a, double b, double expected) {
         checkTime();
         double pow = calculator.pow(a, b);
-        Assert.assertEquals(pow, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(pow, expected, DELTA, "Method 'pow' returned not expected value: ");
     }
 
     @DataProvider(name = "PowDataProvider")

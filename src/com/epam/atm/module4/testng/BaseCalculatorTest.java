@@ -8,6 +8,8 @@ import java.util.Date;
 
 public class BaseCalculatorTest {
 
+    protected static final double DELTA = 1e-15;
+
     protected Calculator calculator;
 
     @BeforeSuite(description = "Before suite preparations")

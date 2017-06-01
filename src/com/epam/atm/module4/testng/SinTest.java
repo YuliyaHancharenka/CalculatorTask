@@ -10,7 +10,7 @@ public class SinTest extends BaseCalculatorTest {
     @Test(description = "Check sin method", dataProvider = "SinDataProvider")
     public void testSin(double a, double expected) {
         double sin = calculator.sin(a);
-        Assert.assertEquals(sin, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(sin, expected, "Method 'sin' returned not expected value: ");
     }
 
     @DataProvider(name = "SinDataProvider")

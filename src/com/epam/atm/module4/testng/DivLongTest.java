@@ -12,6 +12,6 @@ public class DivLongTest extends BaseCalculatorTest {
     public void testLongDiv(long a, long b, long expected) {
         checkTime();
         long div = calculator.div(a, b);
-        Assert.assertEquals(div, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(div, expected, "Method 'testLongDiv' returned not expected value: ");
     }
 }

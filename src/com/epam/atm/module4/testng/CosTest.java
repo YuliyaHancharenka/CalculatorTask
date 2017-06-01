@@ -11,7 +11,7 @@ public class CosTest extends BaseCalculatorTest {
     public void testCos(double a, double expected) {
         checkTime();
         double cos = calculator.cos(a);
-        Assert.assertEquals(cos, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(cos, expected, "Method 'cos' returned not expected value: ");
     }
 
     @DataProvider(name = "CosDataProvider")

@@ -10,7 +10,7 @@ public class MultLongTest extends BaseCalculatorTest {
     @Test(description = "Check long multiplication method", dataProvider = "MultLongDataProvider")
     public void testLongMult(long a, long b, long expected) {
         long mult = calculator.mult(a, b);
-        Assert.assertEquals(mult, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(mult, expected, "Method 'testLongMult' returned not expected value: ");
     }
 
     @DataProvider(name = "MultLongDataProvider")

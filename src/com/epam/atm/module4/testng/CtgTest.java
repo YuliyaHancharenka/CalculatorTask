@@ -10,7 +10,7 @@ public class CtgTest extends BaseCalculatorTest {
     @Test(description = "Check ctg method", dataProvider = "CtgDataProvider")
     public void testCtg(double a, double expected) {
         double ctg = calculator.ctg(a);
-        Assert.assertEquals(ctg, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(ctg, expected, "Method 'ctg' returned not expected value: ");
     }
 
     @DataProvider(name = "CtgDataProvider")

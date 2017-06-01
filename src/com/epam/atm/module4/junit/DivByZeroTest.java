@@ -24,8 +24,6 @@ public class DivByZeroTest extends BaseCalculatorTest {
     private long a;
     private long b;
 
-    private static final double DELTA = 1e-15;
-
     public DivByZeroTest(long a, long b) {
         this.a = a;
         this.b = b;

@@ -2,7 +2,7 @@ package com.epam.atm.module4.junit;
 
 
 import com.epam.tat.module4.Calculator;
-import org.junit.*;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -12,31 +12,30 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class MultDoubleTest extends BaseCalculatorTest {
+public class IsNegativeTest extends BaseCalculatorTest {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {1.1, 1, 1.1},
-                {5.1, 2, 10.2}
+                {88, false},
+                {0, false},
+                {-1, true}
         });
     }
 
-    private double a;
-    private double b;
-    private double expected;
+    private long a;
+    private boolean expected;
 
-    public MultDoubleTest(double a, double b, double expected) {
+    public IsNegativeTest(long a, boolean expected) {
         this.a = a;
-        this.b = b;
         this.expected = expected;
     }
 
     @Test
-    public void testDoubleMult() {
+    public void testIsNegative() {
         checkTime();
         Calculator calculator = new Calculator();
-        double mult = calculator.mult(a, b);
-        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, mult, DELTA);
+        boolean isPositive = calculator.isNegative(a);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, isPositive);
     }
 }

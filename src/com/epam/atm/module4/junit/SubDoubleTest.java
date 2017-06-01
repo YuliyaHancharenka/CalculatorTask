@@ -25,8 +25,6 @@ public class SubDoubleTest extends BaseCalculatorTest {
     private double b;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public SubDoubleTest(double a, double b, double expected) {
         this.a = a;
         this.b = b;
@@ -38,6 +36,6 @@ public class SubDoubleTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double sub = calculator.sub(a, b);
-        assertEquals("Expected to be equal: " + expected, expected, sub, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sub, DELTA);
     }
 }

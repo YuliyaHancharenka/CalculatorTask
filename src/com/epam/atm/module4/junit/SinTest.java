@@ -25,8 +25,6 @@ public class SinTest extends BaseCalculatorTest {
     private double a;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public SinTest(double a, double expected) {
         this.a = a;
         this.expected = expected;
@@ -37,6 +35,6 @@ public class SinTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double sin = calculator.sin(a);
-        assertEquals("Expected to be equal: " + expected, expected, sin, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sin, DELTA);
     }
 }

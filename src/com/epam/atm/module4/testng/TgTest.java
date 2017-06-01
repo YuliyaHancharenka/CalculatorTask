@@ -11,7 +11,7 @@ public class TgTest extends BaseCalculatorTest {
     public void testTg(double a, double expected) {
         checkTime();
         double tg = calculator.tg(a);
-        Assert.assertEquals(tg, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(tg, expected, "Method 'tg' returned not expected value: ");
         System.out.println(a);
     }
 

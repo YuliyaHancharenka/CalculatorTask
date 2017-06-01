@@ -25,8 +25,6 @@ public class TgTest extends BaseCalculatorTest {
     private double a;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public TgTest(double a, double expected) {
         this.a = a;
         this.expected = expected;
@@ -37,6 +35,6 @@ public class TgTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double tg = calculator.tg(a);
-        assertEquals("Expected to be equal: " + expected, expected, tg, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, tg, DELTA);
     }
 }

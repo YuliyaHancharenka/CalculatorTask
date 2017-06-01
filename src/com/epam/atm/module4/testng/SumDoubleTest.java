@@ -11,6 +11,6 @@ public class SumDoubleTest extends BaseCalculatorTest {
     public void testDoubleSum(double a, double b, double expected) {
         checkTime();
         double sum = calculator.sum(a, b);
-        Assert.assertEquals(sum, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(sum, expected, "Method 'testDoubleSum' returned not expected value: ");
     }
 }

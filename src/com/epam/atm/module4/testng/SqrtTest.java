@@ -10,7 +10,7 @@ public class SqrtTest extends BaseCalculatorTest {
     @Test(description = "Check sqrt method", dataProvider = "SqrtDataProvider")
     public void testSqrt(double a, double expected) {
         double sqrt = calculator.sqrt(a);
-        Assert.assertEquals(sqrt, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(sqrt, expected, "Method 'sqrt' returned not expected value: ");
     }
 
     @DataProvider(name = "SqrtDataProvider")

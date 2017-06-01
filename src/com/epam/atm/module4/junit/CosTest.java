@@ -25,8 +25,6 @@ public class CosTest extends BaseCalculatorTest {
     private double a;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public CosTest(double a, double expected) {
         this.a = a;
         this.expected = expected;
@@ -37,6 +35,6 @@ public class CosTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double cos = calculator.cos(a);
-        assertEquals("Expected to be equal: " + expected, expected, cos, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, cos, DELTA);
     }
 }

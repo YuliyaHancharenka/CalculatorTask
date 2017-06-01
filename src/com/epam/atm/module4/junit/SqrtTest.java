@@ -25,8 +25,6 @@ public class SqrtTest extends BaseCalculatorTest {
     private double a;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public SqrtTest(double a, double expected) {
         this.a = a;
         this.expected = expected;
@@ -37,6 +35,6 @@ public class SqrtTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double sqrt = calculator.sqrt(a);
-        assertEquals("Expected to be equal: " + expected, expected, sqrt, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sqrt, DELTA);
     }
 }

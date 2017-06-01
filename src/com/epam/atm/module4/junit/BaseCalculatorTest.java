@@ -2,34 +2,38 @@ package com.epam.atm.module4.junit;
 
 import com.epam.tat.module4.Calculator;
 import org.junit.*;
+import org.junit.rules.TestName;
 
 import java.util.Date;
 
 public class BaseCalculatorTest {
 
+    protected static final double DELTA = 1e-15;
+
     protected Calculator calculator;
+
+    @Rule
+    public TestName testName = new TestName();
 
     @BeforeClass
     public static void beforeClass() {
-        System.out.println("Class started: " /*+ getClass()*/);
+        System.out.println("Class started");
         System.out.println("Create instance of Calculator");
     }
 
     @Before
-    public void beforeMethod(/*Method method*/) {
-        //String testName = method.getName();
-        System.out.println("Method started: "/* + testName*/);
+    public void beforeMethod() {
+        System.out.println("Method started: " + testName.getMethodName());
     }
 
     @After
-    public void afterMethod(/*Method method*/) {
-       // String testName = method.getName();
-        System.out.println("Method finished: "/* + testName*/);
+    public void afterMethod() {
+        System.out.println("Method finished: " + testName.getMethodName());
     }
 
     @AfterClass
     public static void afterClass() {
-        System.out.println("Class finished: " /*+ getClass()*/);
+        System.out.println("Class finished");
     }
 
     protected void checkTime() {

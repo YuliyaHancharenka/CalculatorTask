@@ -22,7 +22,7 @@ public class SubLongTest extends BaseCalculatorTest {
     @Test(description = "Check long subtraction method")
     public void testLongSub() {
         long sub = calculator.sub(a, b);
-        Assert.assertEquals(sub, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(sub, expected, "Method 'testLongSub' returned not expected value: ");
     }
 
 

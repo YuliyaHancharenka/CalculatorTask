@@ -12,6 +12,6 @@ public class DivDoubleTest extends BaseCalculatorTest {
     public void testDoubleDiv(double a, double b, double expected) {
         checkTime();
         double div = calculator.div(a, b);
-        Assert.assertEquals(div, expected, "Expected to be equal: " + expected);
+        Assert.assertEquals(div, expected, "Method 'testDoubleDiv' returned not expected value: ");
     }
 }

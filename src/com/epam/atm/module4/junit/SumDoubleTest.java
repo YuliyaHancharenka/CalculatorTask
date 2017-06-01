@@ -25,8 +25,6 @@ public class SumDoubleTest extends BaseCalculatorTest {
     private double b;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public SumDoubleTest(double a, double b, double expected) {
         this.a = a;
         this.b = b;
@@ -38,6 +36,6 @@ public class SumDoubleTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double sum = calculator.sum(a, b);
-        assertEquals("Expected to be equal: " + expected, expected, sum, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sum, DELTA);
     }
 }

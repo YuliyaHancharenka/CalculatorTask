@@ -11,8 +11,6 @@ public class SubDoubleTest extends BaseCalculatorTest {
     private double b;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     @Factory(dataProvider = "SubDoubleDataProvider")
     public SubDoubleTest(double a, double b, double expected) {
         this.a = a;
@@ -23,7 +21,7 @@ public class SubDoubleTest extends BaseCalculatorTest {
     @Test(description = "Check double subtraction method")
     public void testDoubleSub() {
         double sub = calculator.sub(a, b);
-        Assert.assertEquals(sub, expected, DELTA, "Expected to be equal: " + expected);
+        Assert.assertEquals(sub, expected, DELTA, "Method 'testDoubleSub' returned not expected value: ");
     }
 
 

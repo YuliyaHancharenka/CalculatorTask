@@ -6,7 +6,8 @@ import org.testng.annotations.Test;
 
 public class DivByZeroTest extends BaseCalculatorTest {
 
-    @Test(description = "Check division by zero method", dataProvider = "DivByZeroDataProvider", expectedExceptions = NumberFormatException.class)
+    @Test(description = "Check division by zero method", dataProvider = "DivByZeroDataProvider",
+            expectedExceptions = NumberFormatException.class)
     public void testDivByZero(long a, long b) {
         long divByZero = calculator.div(a, b);
     }

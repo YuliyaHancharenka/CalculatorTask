@@ -25,8 +25,6 @@ public class CtgTest extends BaseCalculatorTest {
     private double a;
     private double expected;
 
-    private static final double DELTA = 1e-15;
-
     public CtgTest(double a, double expected) {
         this.a = a;
         this.expected = expected;
@@ -37,6 +35,6 @@ public class CtgTest extends BaseCalculatorTest {
         checkTime();
         Calculator calculator = new Calculator();
         double ctg = calculator.ctg(a);
-        assertEquals("Expected to be equal: " + expected, expected, ctg, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, ctg, DELTA);
     }
 }
