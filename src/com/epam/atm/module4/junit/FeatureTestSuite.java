@@ -20,6 +20,8 @@ import org.junit.runners.Suite;
         SumDoubleTest.class,
         SumLongTest.class,
         TgTest.class,
+        IsPositiveTest.class,
+        IsNegativeTest.class
 })
 
 public class FeatureTestSuite {

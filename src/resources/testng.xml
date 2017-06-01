@@ -114,4 +114,16 @@
         </classes>
     </test>
 
+    <test name="IsPositiveTest">
+        <classes>
+            <class name="com.epam.atm.module4.testng.IsPositiveTest"></class>
+        </classes>
+    </test>
+
+    <test name="IsNegativeTest">
+        <classes>
+            <class name="com.epam.atm.module4.testng.IsNegativeTest"></class>
+        </classes>
+    </test>
+
 </suite>
