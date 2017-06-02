@@ -10,7 +10,7 @@ public class BaseCalculatorTest {
 
     protected static final double DELTA = 1e-15;
 
-    protected Calculator calculator;
+    protected Calculator calculator = new Calculator();
 
     @Rule
     public TestName testName = new TestName();
@@ -18,7 +18,6 @@ public class BaseCalculatorTest {
     @BeforeClass
     public static void beforeClass() {
         System.out.println("Class started");
-        System.out.println("Create instance of Calculator");
     }
 
     @Before

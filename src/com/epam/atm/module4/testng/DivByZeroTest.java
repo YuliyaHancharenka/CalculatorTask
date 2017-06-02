@@ -15,8 +15,9 @@ public class DivByZeroTest extends BaseCalculatorTest {
     @DataProvider(name = "DivByZeroDataProvider")
     public Object[][] divByZeroDataProvider() {
         return new Object[][]{
-                {5, 0},
-                {6, 0}
+                {121, 0},
+                {-21, 0},
+                {168898, 0}
         };
     }
 }

@@ -20,6 +20,7 @@ public class TgTest extends BaseCalculatorTest {
         System.out.println(Math.PI);
         return new Object[][]{
                 {Math.PI / 4, 1},
+                {-Math.PI / 3, -Math.sqrt(3)},
                 {Math.PI, 0}
         };
     }

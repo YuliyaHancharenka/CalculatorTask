@@ -1,6 +1,5 @@
 package com.epam.atm.module4.junit;
 
-import com.epam.tat.module4.Calculator;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -17,7 +16,8 @@ public class SumDoubleTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1.4, 1.5, 2.9},
-                {5.1, 2, 7.1}
+                {5.1, -2, 3.1},
+                {-5.1, -2, -7.1}
         });
     }
 
@@ -34,8 +34,8 @@ public class SumDoubleTest extends BaseCalculatorTest {
     @Test
     public void testDoubleSum() {
         checkTime();
-        Calculator calculator = new Calculator();
         double sum = calculator.sum(a, b);
-        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sum, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value",
+                expected, sum, DELTA);
     }
 }

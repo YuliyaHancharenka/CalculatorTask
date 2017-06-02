@@ -1,7 +1,6 @@
 package com.epam.atm.module4.junit;
 
 
-import com.epam.tat.module4.Calculator;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -18,7 +17,8 @@ public class CtgTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {Math.PI / 4, 1},
-                {Math.PI / 2, 0}
+                {Math.PI / 4, 1},
+                {-Math.PI / 6, -Math.sqrt(3)}
         });
     }
 
@@ -33,7 +33,6 @@ public class CtgTest extends BaseCalculatorTest {
     @Test
     public void testCtg() {
         checkTime();
-        Calculator calculator = new Calculator();
         double ctg = calculator.ctg(a);
         assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, ctg, DELTA);
     }

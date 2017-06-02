@@ -30,7 +30,8 @@ public class SubLongTest extends BaseCalculatorTest {
     public static Object[][] subLongDataProvider() {
         return new Object[][]{
                 {1, 1, 0},
-                {0, 0, 0}
+                {-5, 2, -7},
+                {-5, -2, -3}
         };
     }
 }

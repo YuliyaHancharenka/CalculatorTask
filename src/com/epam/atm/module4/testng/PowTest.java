@@ -18,7 +18,8 @@ public class PowTest extends BaseCalculatorTest {
     public Object[][] powDataProvider() {
         return new Object[][]{
                 {1, 1, 1},
-                {5.1, 2, 26.01}
+                {5.1, 2, 26.01},
+                {81, 0.5, 9}
         };
     }
 }

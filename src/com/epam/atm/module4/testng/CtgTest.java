@@ -17,7 +17,8 @@ public class CtgTest extends BaseCalculatorTest {
     public Object[][] ctgDataProvider() {
         return new Object[][]{
                 {Math.PI / 4, 1},
-                {Math.PI / 2, 0}
+                {Math.PI / 2, 0},
+                {-Math.PI / 6, -Math.sqrt(3)}
         };
     }
 }

@@ -1,7 +1,6 @@
 package com.epam.atm.module4.junit;
 
 
-import com.epam.tat.module4.Calculator;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -18,7 +17,8 @@ public class DivLongTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1, 1, 1},
-                {6, 2, 3}
+                {-6, -2, 3},
+                {-6666, 2, -3333}
         });
     }
 
@@ -35,8 +35,8 @@ public class DivLongTest extends BaseCalculatorTest {
     @Test
     public void testLongDiv() {
         checkTime();
-        Calculator calculator = new Calculator();
         double div = calculator.div(a, b);
-        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, div, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value",
+                expected, div, DELTA);
     }
 }

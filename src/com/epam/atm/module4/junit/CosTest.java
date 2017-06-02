@@ -1,7 +1,6 @@
 package com.epam.atm.module4.junit;
 
 
-import com.epam.tat.module4.Calculator;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -18,7 +17,8 @@ public class CosTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {Math.PI / 4, 1},
-                {Math.PI, -1}
+                {Math.PI, -1},
+                {-Math.PI / 3, -0.5}
         });
     }
 
@@ -33,7 +33,6 @@ public class CosTest extends BaseCalculatorTest {
     @Test
     public void testCos() {
         checkTime();
-        Calculator calculator = new Calculator();
         double cos = calculator.cos(a);
         assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, cos, DELTA);
     }

@@ -18,6 +18,7 @@ public class CosTest extends BaseCalculatorTest {
     public Object[][] cosDataProvider() {
         return new Object[][]{
                 {Math.PI / 4, 1},
+                {-Math.PI / 3, -0.5},
                 {Math.PI, -1}
         };
     }

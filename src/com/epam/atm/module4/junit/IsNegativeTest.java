@@ -1,7 +1,6 @@
 package com.epam.atm.module4.junit;
 
 
-import com.epam.tat.module4.Calculator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -34,8 +33,8 @@ public class IsNegativeTest extends BaseCalculatorTest {
     @Test
     public void testIsNegative() {
         checkTime();
-        Calculator calculator = new Calculator();
         boolean isPositive = calculator.isNegative(a);
-        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, isPositive);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value",
+                expected, isPositive);
     }
 }

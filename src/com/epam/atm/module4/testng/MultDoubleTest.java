@@ -16,8 +16,9 @@ public class MultDoubleTest extends BaseCalculatorTest {
     @DataProvider(name = "MultDoubleDataProvider")
     public Object[][] multDoubleDataProvider() {
         return new Object[][]{
-                {10, 2, 20},
-                {8.2, 2, 16.4}
+                {1.1, -1, -1.1},
+                {5.1, 2, 10.2},
+                {-5.1, -2, 10.2}
         };
     }
 }

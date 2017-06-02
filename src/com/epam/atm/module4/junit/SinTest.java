@@ -1,7 +1,6 @@
 package com.epam.atm.module4.junit;
 
 
-import com.epam.tat.module4.Calculator;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -18,6 +17,7 @@ public class SinTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {Math.PI / 2, 1},
+                {-Math.PI / 6, -0.5},
                 {0, 0},
         });
     }
@@ -33,8 +33,8 @@ public class SinTest extends BaseCalculatorTest {
     @Test
     public void testSin() {
         checkTime();
-        Calculator calculator = new Calculator();
         double sin = calculator.sin(a);
-        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sin, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value",
+                expected, sin, DELTA);
     }
 }

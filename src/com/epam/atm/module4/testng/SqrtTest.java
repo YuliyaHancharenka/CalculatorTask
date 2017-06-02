@@ -17,7 +17,7 @@ public class SqrtTest extends BaseCalculatorTest {
     public Object[][] sqrtDataProvider() {
         return new Object[][]{
                 {121, 11},
-                {16, 4}
+                {16.81, 4.1}
         };
     }
 }

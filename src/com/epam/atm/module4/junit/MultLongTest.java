@@ -1,6 +1,6 @@
 package com.epam.atm.module4.junit;
 
-import com.epam.tat.module4.Calculator;
+
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -17,7 +17,8 @@ public class MultLongTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {1, 1, 1},
-                {5, 2, 10}
+                {5, -2, -10},
+                {-5, -2, 10}
         });
     }
 
@@ -34,7 +35,6 @@ public class MultLongTest extends BaseCalculatorTest {
     @Test
     public void testLongMult() {
         checkTime();
-        Calculator calculator = new Calculator();
         double mult = calculator.mult(a, b);
         assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, mult, DELTA);
     }

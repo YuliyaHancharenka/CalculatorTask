@@ -28,8 +28,9 @@ public class SubDoubleTest extends BaseCalculatorTest {
     @DataProvider(name = "SubDoubleDataProvider")
     public static Object[][] subDoubleDataProvider() {
         return new Object[][]{
-                {1.5, 1.4, 0.1},
-                {0.7, 0.4, 0.3}
+                {1, 1.1, -0.1},
+                {-5.1, 2.1, -7.2},
+                {-5, -2, -3}
         };
     }
 }

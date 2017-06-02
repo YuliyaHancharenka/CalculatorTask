@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class IsNegativeTest extends BaseCalculatorTest {
 
     @Test(description = "Check isNegative method", dataProvider = "IsNegativeDataProvider")
-    public void testCos(long a, boolean expected) {
+    public void testIsNegative(long a, boolean expected) {
         checkTime();
         boolean isNegative = calculator.isNegative(a);
         Assert.assertEquals(isNegative, expected, "Method 'isNegative' returned not expected value: ");

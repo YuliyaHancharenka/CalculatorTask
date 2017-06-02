@@ -1,7 +1,6 @@
 package com.epam.atm.module4.junit;
 
 
-import com.epam.tat.module4.Calculator;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -18,7 +17,7 @@ public class SqrtTest extends BaseCalculatorTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {121, 11},
-                {16, 4}
+                {16.81, 4.1}
         });
     }
 
@@ -33,8 +32,8 @@ public class SqrtTest extends BaseCalculatorTest {
     @Test
     public void testSqrt() {
         checkTime();
-        Calculator calculator = new Calculator();
         double sqrt = calculator.sqrt(a);
-        assertEquals("Method " + testName.getMethodName() + " returned not expected value", expected, sqrt, DELTA);
+        assertEquals("Method " + testName.getMethodName() + " returned not expected value",
+                expected, sqrt, DELTA);
     }
 }
